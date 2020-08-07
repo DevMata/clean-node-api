@@ -1,0 +1,10 @@
+# IDEs and editors
+.idea
+.vscode
+
+# Application
+node_modules
+.env
+dist
+
+
