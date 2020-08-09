@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
+    "test:staged": "jest",
     "lint": "eslint '*/**/*.ts' --quiet --fix"
   },
   "keywords": [],
