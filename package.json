@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
-    "test:staged": "jest",
+    "test": "jest --passWithNoTests",
+    "test:staged": "jest --passWithNoTests",
+    "test:watch": "jest --watch",
     "lint": "eslint '*/**/*.ts' --quiet --fix"
   },
   "keywords": [],
