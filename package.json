@@ -5,8 +5,11 @@
   "main": "index.js",
   "scripts": {
     "test": "jest --passWithNoTests",
-    "test:staged": "jest --passWithNoTests",
-    "test:watch": "jest --watch",
+    "test:watch": "npm run test -- --watch",
+    "test:staged": "npm run test -- --findRelatedTests",
+    "test:unit": "npm run test:watch -- -c jest-unit-config.js",
+    "test:integration": "npm run test:watch -- -c jest-integration-config.js",
+    "test:ci": "npm run test -- --coverage",
     "lint": "eslint '*/**/*.ts' --quiet --fix"
   },
   "keywords": [],
