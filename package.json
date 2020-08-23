@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "sucrase-node src/main/server.ts",
     "test": "jest --passWithNoTests",
     "test:watch": "npm run test -- --watch",
     "test:staged": "npm run test -- --findRelatedTests",
@@ -18,6 +19,7 @@
   "devDependencies": {
     "@shelf/jest-mongodb": "^1.2.2",
     "@types/bcrypt": "^3.0.0",
+    "@types/express": "^4.17.7",
     "@types/jest": "^26.0.9",
     "@types/mongodb": "^3.5.26",
     "@types/node": "^14.0.27",
@@ -31,11 +33,13 @@
     "jest": "^26.2.2",
     "lint-staged": "^10.2.11",
     "prettier": "^2.0.5",
+    "sucrase": "^3.15.0",
     "ts-jest": "^26.1.4",
     "typescript": "^3.9.7"
   },
   "dependencies": {
     "bcrypt": "^5.0.0",
+    "express": "^4.17.1",
     "mongodb": "^3.6.0",
     "validator": "^13.1.1"
   }
