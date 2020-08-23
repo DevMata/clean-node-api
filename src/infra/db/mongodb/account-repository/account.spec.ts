@@ -7,6 +7,11 @@ const makeSut = (): AccountMongoRepository => {
 };
 
 describe('Account Mongo Repository', () => {
+  beforeEach(async () => {
+    const accountsCollections = MongoHelper.getCollection('accounts');
+    await accountsCollections.deleteMany({});
+  });
+
   beforeAll(async () => {
     await MongoHelper.connect(MONGO_URL || ' ');
   });
