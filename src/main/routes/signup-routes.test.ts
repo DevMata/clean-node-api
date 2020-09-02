@@ -5,7 +5,7 @@ const { MONGO_URL } = process.env;
 
 describe('SignUp Routes', () => {
   beforeEach(async () => {
-    const accountsCollections = MongoHelper.getCollection('accounts');
+    const accountsCollections = await MongoHelper.getCollection('accounts');
     await accountsCollections.deleteMany({});
   });
 
