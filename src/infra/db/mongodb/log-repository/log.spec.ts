@@ -4,6 +4,10 @@ import { LoginMongoRepository } from './log';
 
 const { MONGO_URL } = process.env;
 
+const makeSut = (): LoginMongoRepository => {
+  return new LoginMongoRepository();
+};
+
 describe('Log Mongo Repository', () => {
   let errorCollection: Collection;
 
@@ -21,7 +25,7 @@ describe('Log Mongo Repository', () => {
   });
 
   it('should create an error log on success', async () => {
-    const sut = new LoginMongoRepository();
+    const sut = makeSut();
     await sut.logError('any_error');
     const count = await errorCollection.countDocuments();
 
